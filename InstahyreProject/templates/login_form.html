@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Form</title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+     form{ margin-top: 10px; background-color:lightgreen; padding: 20px; margin-left: 380px;
+         width: 400px; border-radius: 50px; }
+     body{ background-color: skyblue; }
+     .btn{ margin-left: 10px; }
+     h1{ text-align: center; font-size: 40px; font-family: Cambria; color: blue;
+     }
+    a{
+        font-size: 20px;
+    }
+ </style>
+
+<body>
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-4">
+            <form method="POST">
+                <center><h1>Please Login Here</h1></center>
+                {% csrf_token %}
+                {{ lform }}<br>
+                <center>
+                    <input type="submit" value="Login" class=" btn-success">
+                    <input type="reset" value="clear" class=" btn-danger">
+                    <br>
+                    <br>
+                    <a href="/registration/">Create New Account</a>
+                </center>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
